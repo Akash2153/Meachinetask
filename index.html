@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simple Form</h1>
+    <form id="simpleForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+        
+        <label for="rank">Rank:</label>
+        <select id="rank" name="rank" required>
+            <option value="">Select Rank</option>
+            <option value="First Rank">First Rank</option>
+            <option value="Second Rank">Second Rank</option>
+            <option value="Third Rank">Third Rank</option>
+        </select>
+        
+        <label for="idNumber">ID Number:</label>
+        <input type="text" id="idNumber" name="idNumber" pattern="#\d{6}" title="ID must start with # followed by 6 digits" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="preview">
+        <div id="photoPreview">User Photo</div>
+        <div id="textPreview">
+            <div id="idDisplay"></div>
+            <div id="nameDisplay"></div>
+            <div id="congratsMessage"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
